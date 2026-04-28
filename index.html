@@ -151,45 +151,60 @@
 
   <h3>Last Day of School</h3>
   <div class="gallery">
-    <img src="photo7.jpeg">
-    <img src="photo8.jpeg">
-    <img src="photo9.jpeg">
-    <img src="photo10.jpeg">
+    <img src="photo7.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo8.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo9.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo10.jpeg" onclick="openLightbox(this.src)">
   </div>
 
   <h3>New Year Celebration</h3>
   <div class="gallery">
-    <img src="photo11.jpeg">
-    <img src="photo13.jpeg">
+    <img src="photo11.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo13.jpeg" onclick="openLightbox(this.src)">
   </div>
 
   <h3>Mohini Mam's Birthday</h3>
   <div class="gallery">
-    <img src="photo12.jpeg">
-    <img src="photo17.jpeg">
-    <img src="photo20.jpeg">
-    <img src="photo21.jpeg">
-    <img src="photo23.jpeg">
+    <img src="photo12.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo17.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo20.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo21.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo23.jpeg" onclick="openLightbox(this.src)">
   </div>
 
   <h3>Children's Day</h3>
   <div class="gallery">
-    <img src="photo14.jpeg">
-    <img src="photo16.jpeg">
-    <img src="photo18.jpeg">
-    <img src="photo19.jpeg">
+    <img src="photo14.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo16.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo18.jpeg" onclick="openLightbox(this.src)">
+    <img src="photo19.jpeg" onclick="openLightbox(this.src)">
   </div>
 
   <h3>Sankranti Celebration</h3>
   <div class="gallery">
-    <img src="photo22.jpeg">
+    <img src="photo22.jpeg" onclick="openLightbox(this.src)">
   </div>
 
   <h3>Christmas Celebration</h3>
   <div class="gallery">
-    <img src="photo15.jpeg">
+    <img src="photo15.jpeg" onclick="openLightbox(this.src)">
   </div>
-</section> 
+</section>
+
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); text-align:center;">
+  <img id="lightbox-img" style="max-width:90%; max-height:90%; margin-top:3%;">
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById("lightbox").style.display = "block";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
   
 <section id="videos">
   <h2>Video Memories</h2>
