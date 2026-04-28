@@ -11,12 +11,14 @@
       background: #fdf6f0;
       color: #333;
     }
+
     header {
       background: linear-gradient(135deg, #ff7eb3, #ff758c);
       color: white;
       text-align: center;
       padding: 50px 20px;
     }
+
     nav {
       background: #fff;
       text-align: center;
@@ -25,55 +27,53 @@
       position: sticky;
       top: 0;
     }
+
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: #ff4f81;
       font-weight: bold;
     }
+
     section {
       padding: 50px 20px;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
       color: #ff4f81;
+      text-align: center;
     }
-    .gallery {
+
+    .gallery, .teachers-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
     }
+
     .gallery img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-.teachers-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.teachers-gallery div {
-  text-align: center;
-}
-
-.teachers-gallery img {
-  width: 100%;
-  max-width: 300px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-      background: #ffe4ec;
+      width: 100%;
       height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      object-fit: cover;
       border-radius: 10px;
-      color: #777;
+      cursor: pointer;
     }
+
+    .teachers-gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .gallery p, .teachers-gallery p {
+      font-weight: bold;
+      color: #444;
+    }
+
     .message-box {
       background: #fff0f5;
       padding: 15px;
@@ -81,15 +81,24 @@
       margin: 10px 0;
       border-radius: 8px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
       background: #ff758c;
       color: white;
     }
+
+    .credit {
+      font-size: 14px;
+      font-style: italic;
+      color: gold;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>8th Rose Class IDPS</h1>
     <p>Our unforgettable school memories together 🌸</p>
@@ -98,80 +107,71 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#gallery">Gallery</a>
+    <a href="#festivals">Festivals</a>
+    <a href="#videos">Videos</a>
     <a href="#teachers">Teachers</a>
     <a href="#farewell">Farewell</a>
   </nav>
 
   <section id="home">
     <h2>Welcome</h2>
-    <p>Welcome to the memories page of <strong>8th Rose Class IDPS</strong>. This is our digital memory book where we celebrate the laughter, friendships, and unforgettable moments we shared together.</p>
+    <p>Welcome to the memories page of <strong>8th Rose Class IDPS</strong>. This is our digital memory book where we celebrate our laughter, friendships, and unforgettable moments.</p>
   </section>
 
-<section id="gallery">
-  <h2>Photo Gallery</h2>
-  <div class="gallery">
-    <div>
-      <img src="photo3.jpeg" alt="Last Day of School" onclick="openLightbox(this.src)">
-      <p>Last Day of School</p>
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <div><img src="photo3.jpeg"><p>Last Day of School</p></div>
+      <div><img src="photo4.jpeg"><p>Christmas Celebration</p></div>
+      <div><img src="photo5.jpeg"><p>Last Day of School</p></div>
+      <div><img src="photo6.jpeg"><p>Christmas Celebration</p></div>
     </div>
-    <div>
-      <img src="photo4.jpeg" alt="Christmas Celebration" onclick="openLightbox(this.src)">
-      <p>Christmas Celebration</p>
-    </div>
-    <div>
-      <img src="photo5.jpeg" alt="Last Day of School" onclick="openLightbox(this.src)">
-      <p>Last Day of School</p>
-    </div>
-    <div>
-      <img src="photo6.jpeg" alt="New Year" onclick="openLightbox(this.src)">
-      <p>New Year</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
-  <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px;">
-</div>
-
-<script>
-function openLightbox(src) {
-  document.getElementById('lightbox').style.display = 'flex';
-  document.getElementById('lightbox-img').src = src;
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-}
-</script>
-
- <section id="teachers">
-  <h2>Class Teacher</h2>
-  <div class="teachers-gallery">
-    <div>
-      <img src="photo1.jpeg" alt="A.N. Mohini">
-      <p>A.N. Mohini</p>
+  <section id="festivals">
+    <h2>Festivals Celebrated</h2>
+    <div class="gallery">
+      <div><p>Christmas Celebration</p></div>
+      <div><p>Diwali Celebration</p></div>
+      <div><p>Annual Day</p></div>
     </div>
-    <div>
-      <img src="photo2.jpeg" alt="A.N. Mohini">
-      <p>A.N. Mohini</p>
+  </section>
+
+  <section id="videos">
+    <h2>Video Memories</h2>
+    <div style="text-align:center;">
+      <video width="80%" controls>
+        <source src="schoolmemory.mp4" type="video/mp4">
+      </video>
+      <p>Our School Memory Video</p>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="teachers">
+    <h2>Class Teacher</h2>
+    <div class="teachers-gallery">
+      <div>
+        <img src="photo1.jpeg">
+        <p>A.N. Mohini</p>
+      </div>
+      <div>
+        <img src="photo2.jpeg">
+        <p>A.N. Mohini</p>
+      </div>
+    </div>
+  </section>
 
   <section id="farewell">
     <h2>Farewell Messages</h2>
     <div class="message-box">"The best memories were made in our classroom."</div>
     <div class="message-box">"Friends, fun, and unforgettable school days forever."</div>
     <div class="message-box">"8th Rose Class will always stay in our hearts."</div>
-    <div class="message-box">"From 8th class mischief to meaningful moments, this journey has been incredible. Rose, you made even ordinary days memorable with your smile. The IDP sessions brought us closer and made learning exciting. Farewell, dear friends — we'll meet again!."</div>
-    <div class="message-box">"As we say goodbye, I want to thank you all for the beautiful 8th class memories. Rose, your laughter and support meant the world, and those IDP sessions added so much color to our school life. Wishing you success, happiness, and endless new adventures ahead!."</div>
   </section>
 
- <footer style="text-align: center; padding: 20px; background: #ff758c; color: white;">
-  <p>Made with love by 8th Rose Class IDPS 💖</p>
-  <p style="font-size: 14px; font-style: italic; color: gold; margin-top: 5px;">
-    Created by N. Narasimha Praneeth Reddy
-  </p>
-</footer>
+  <footer>
+    <p>Made with love by 8th Rose Class IDPS 💖</p>
+    <p class="credit">Created by N. Narasimha Praneeth Reddy</p>
+  </footer>
+
 </body>
 </html>
